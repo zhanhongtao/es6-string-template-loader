@@ -1,6 +1,6 @@
 {
   "name": "es6-string-template-loader",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "write html template using es6 string syntax",
   "main": "index.js",
   "scripts": {},
