@@ -1,5 +1,10 @@
 # es6-string-template-loader
 
+## install
+```
+npm install --save-dev es6-string-template-loader
+```
+
 ## config
 ```js
   // webpack config
