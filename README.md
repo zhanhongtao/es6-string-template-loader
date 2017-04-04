@@ -41,13 +41,13 @@ let html = x1({name: '<strong>template</strong>'})
 ## demo2
 ```html
 // 2.xhtml
-<h1 class="author">$${it.name}</h1>
+<h1 class="author">${utils.escape(it.name)}</h1>
 ```
 
 ```js
 import x1 from './2.xhtml'
 import escape from './escape.js'
-let html = x1({name: '<strong>template</strong>'}, escape)
+let html = x1({name: '<strong>template</strong>'}, {escape})
 // result:
 // <h1 class="author">&lt;strong&gt;template&lt;/strong&gt;</h1>
 ```
@@ -82,20 +82,4 @@ export function escape (sections, ...vars) {
   }
   return ret
 }
-```
-
-## demo3
-```html
-// 3.xhtml
-<h1 class="${utils.style.author}">${it.name}</h1>
-```
-
-```js
-import x1 from './3.xhtml'
-let style = {author: 'ba3xfz'} // ex: css modules
-let tag = null
-let utils = {style: style}
-let html = x1({name: '<strong>template</strong>'}, tag, utils)
-// result:
-// <h1 class="ba3xfz"><strong>template</strong></h1>
 ```
