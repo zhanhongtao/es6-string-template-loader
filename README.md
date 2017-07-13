@@ -83,3 +83,16 @@ export function escape (sections, ...vars) {
   return ret
 }
 ```
+
+## demo3
+```html
+// 3.xhtml
+<h1 class="${css.author}">${utils.escape(it.name)}</h1>
+```
+
+```js
+import css from './all.scss'
+import x1 from './2.xhtml'
+import escape from './escape.js'
+let html = x1({name: '<strong>template</strong>'}, {escape}, css)
+```
